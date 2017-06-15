@@ -18,9 +18,9 @@
   <tbody>
     <% @meals.each do |meal| %>
       <tr>
-        <td><%= meal.school %></td>
-        <td><%= meal.kind %></td>
-        <td><%= meal.age %></td>
+        <td><%= meal.school.name %></td>
+        <td><%= meal.kind.name %></td>
+        <td><%= meal.age.name %></td>
         <td><%= meal.scheduled_to %></td>
         <td><%= meal.planned %></td>
         <td><%= meal.served %></td>

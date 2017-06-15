@@ -37,8 +37,8 @@ when "development"
   k5 = Kind.create({name: 'REFEIÇÃO DA TARDE'})
 
   m1 = Meal.create({school: s1, planned:'Arroz, feijao, abobrinha, frango desfiado, salada de alface', served:'Arroz, feijao, abobrinha, frango desfiado, salada de alface', scheduled_to:'#06/12/2017#', age: a1, kind: k3})
-  m2 = Meal.create({school: s2, planned:'Arroz, feijao, abobrinha, frango desfiado, salada de alface', served:'Arroz, feijao, abobrinha, frango desfiado, salada de acelga', scheduled_to:'#06/12/2017#', age: a1, kind: k3})
-  m3 = Meal.create({school: s3, planned:'Arroz, feijao, abobrinha, frango desfiado, salada de alface', served:'Arroz, feijao, cenoura, frango, salada de couve', scheduled_to:'#06/12/2017#', age: a1, kind: k3})
+  m2 = Meal.create({school: s2, planned:'Arroz, feijao, abobrinha, frango desfiado, salada de alface', served:'Arroz, feijao, abobrinha, frango desfiado, salada de acelga', scheduled_to:'#06/12/2017#', age: a3, kind: k3})
+  m3 = Meal.create({school: s3, planned:'Arroz, feijao, abobrinha, frango desfiado, salada de alface', served:'Arroz, feijao, cenoura, frango, salada de couve', scheduled_to:'#06/12/2017#', age: a3, kind: k3})
 
 
   # Group.create({{name: '1'}, {name: '2'},{name: '3'},{name: '4'}})

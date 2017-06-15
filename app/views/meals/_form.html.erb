@@ -13,17 +13,20 @@
 
   <div class="field">
     <%= form.label :school_id %>
-    <%= form.text_field :school_id, id: :meal_school_id %>
+    <%-# form.text_field :school_id, id: :meal_school_id %>
+    <%= form.collection_select(:school_id,School.order(:name), :id, :name) %> 
   </div>
 
   <div class="field">
     <%= form.label :kind_id %>
-    <%= form.text_field :kind_id, id: :meal_kind_id %>
+    <%-# form.text_field :kind_id, id: :meal_kind_id %>
+    <%= form.collection_select(:kind_id,Kind.order(:name), :id, :name) %> 
   </div>
 
   <div class="field">
     <%= form.label :age_id %>
-    <%= form.text_field :age_id, id: :meal_age_id %>
+    <%-# form.text_field :age_id, id: :meal_age_id %>
+    <%= form.collection_select(:age_id,Age.order(:name), :id, :name) %>     
   </div>
 
   <div class="field">

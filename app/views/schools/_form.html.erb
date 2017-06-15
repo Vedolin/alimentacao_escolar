@@ -23,12 +23,13 @@
 
   <div class="field">
     <%= form.label :execution_id %>
-    <%= form.text_field :execution_id, id: :school_execution_id %>
+    <%= form.collection_select(:execution_id,Execution.order(:name), :id, :name) %> 
+  </div>
   </div>
 
   <div class="field">
     <%= form.label :group_id %>
-    <%= form.text_field :group_id, id: :school_group_id %>
+    <%= form.collection_select(:group_id,Group.order(:name), :id, :name) %> 
   </div>
 
   <div class="actions">
