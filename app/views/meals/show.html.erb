@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>School:</strong>
+  <%= @meal.school %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @meal.kind %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @meal.age %>
+</p>
+
+<p>
+  <strong>Scheduled to:</strong>
+  <%= @meal.scheduled_to %>
+</p>
+
+<p>
+  <strong>Planned:</strong>
+  <%= @meal.planned %>
+</p>
+
+<p>
+  <strong>Served:</strong>
+  <%= @meal.served %>
+</p>
+
+<%= link_to 'Edit', edit_meal_path(@meal) %> |
+<%= link_to 'Back', meals_path %>
