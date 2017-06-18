@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'pages#landing' 
   resources :meals
   resources :schools
   resources :kinds
