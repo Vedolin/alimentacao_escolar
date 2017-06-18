@@ -56,3 +56,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'fuzzy-string-match'
 #gem 'string-similarity'
 # gem 'fuzzy_match' Not what we want...
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-jquery'
+  gem 'rails-assets-bootstrap', '~> 4.0.0.alpha.6'
+  gem 'rails-assets-tether'
+end
