@@ -62,3 +62,5 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '~> 4.0.0.alpha.6'
   gem 'rails-assets-tether'
 end
+
+gem 'simple_form'

@@ -1,18 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>School:</strong>
-  <%= @meal.school.name %>
+  <strong>Planned:</strong>
+  <%= @meal.planned %>
 </p>
 
 <p>
-  <strong>Kind:</strong>
-  <%= @meal.kind.name %>
-</p>
-
-<p>
-  <strong>Age:</strong>
-  <%= @meal.age.name %>
+  <strong>Served:</strong>
+  <%= @meal.served %>
 </p>
 
 <p>
@@ -21,13 +16,18 @@
 </p>
 
 <p>
-  <strong>Planned:</strong>
-  <%= @meal.planned %>
+  <strong>Age:</strong>
+  <%= @meal.age.name %>
 </p>
 
 <p>
-  <strong>Served:</strong>
-  <%= @meal.served %>
+  <strong>Kind:</strong>
+  <%= @meal.kind.name %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @meal.school.name %>
 </p>
 
 <%= link_to 'Edit', edit_meal_path(@meal) %> |

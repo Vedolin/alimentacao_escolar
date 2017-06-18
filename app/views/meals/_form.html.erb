@@ -1,50 +1,16 @@
-<%= form_with(model: meal, local: true) do |form| %>
-  <% if meal.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(meal.errors.count, "error") %> prohibited this meal from being saved:</h2>
+<%= simple_form_for(@meal) do |f| %>
+  <%= f.error_notification %>
 
-      <ul>
-      <% meal.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :school_id %>
-    <%-# form.text_field :school_id, id: :meal_school_id %>
-    <%= form.collection_select(:school_id,School.order(:name), :id, :name) %> 
+  <div class="form-inputs">
+    <%= f.input :planned %>
+    <%= f.input :served %>
+    <%= f.input :scheduled_to %>
+    <%= f.association :age %>
+    <%= f.association :kind %>
+    <%= f.association :school %>
   </div>
 
-  <div class="field">
-    <%= form.label :kind_id %>
-    <%-# form.text_field :kind_id, id: :meal_kind_id %>
-    <%= form.collection_select(:kind_id,Kind.order(:name), :id, :name) %> 
-  </div>
-
-  <div class="field">
-    <%= form.label :age_id %>
-    <%-# form.text_field :age_id, id: :meal_age_id %>
-    <%= form.collection_select(:age_id,Age.order(:name), :id, :name) %>     
-  </div>
-
-  <div class="field">
-    <%= form.label :scheduled_to %>
-    <%= form.date_select :scheduled_to, id: :meal_scheduled_to %>
-  </div>
-
-  <div class="field">
-    <%= form.label :planned %>
-    <%= form.text_area :planned, id: :meal_planned %>
-  </div>
-
-  <div class="field">
-    <%= form.label :served %>
-    <%= form.text_area :served, id: :meal_served %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-actions">
+    <%= f.button :submit %>
   </div>
 <% end %>

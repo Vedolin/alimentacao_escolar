@@ -1,22 +1,11 @@
-<%= form_with(model: execution, local: true) do |form| %>
-  <% if execution.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(execution.errors.count, "error") %> prohibited this execution from being saved:</h2>
+<%= simple_form_for(@execution) do |f| %>
+  <%= f.error_notification %>
 
-      <ul>
-      <% execution.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :execution_name %>
+  <div class="form-inputs">
+    <%= f.input :name %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-actions">
+    <%= f.button :submit %>
   </div>
 <% end %>
