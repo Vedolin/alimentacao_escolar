@@ -1,0 +1,21 @@
+<h1>Welcome</h1>
+
+
+<%= modal_trigger 'Rails Modal', href: '#railsModal', class: "btn btn-primary" %>
+
+<%= modal id: 'railsModal' do %>
+  <%= modal_header 'Modal Rails Title' %>
+  <%= modal_body do %>
+    ...
+  <% end %>
+  <%= modal_footer do %>
+    <button type="button" class="btn btn-primary">Save changes</button>
+  <% end %>
+<% end %>
+
+<%= card do %>
+  <%= card_header 'Hello' %>
+  <%= card_body do %>
+    World!
+  <% end %>
+<% end %>
